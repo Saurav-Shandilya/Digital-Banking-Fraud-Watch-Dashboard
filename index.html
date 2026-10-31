@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking Fraud | Fraud-Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">DIGITAL BANKING SECURITY</p>
+            <h1>Fraud<span>-Watch</span></h1>
+        </div>
+        <span class="status">● Prototype v0.1</span>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="eyebrow">RULES ENGINE · MILESTONE 01</p>
+            <h2>Transaction Risk Analyzer</h2>
+            <p>Evaluate a transaction using amount, frequency and location rules.</p>
+        </section>
+
+        <section class="panel">
+            <h3>Transaction Details</h3>
+            <form id="transactionForm">
+                <label for="amount">Transaction amount (₹)</label>
+                <input id="amount" type="number" min="0.01" step="0.01"
+                       value="25000" required>
+
+                <label for="frequency">Transactions in the last hour</label>
+                <input id="frequency" type="number" min="1" step="1"
+                       value="4" required>
+
+                <label for="location">Transaction location</label>
+                <select id="location">
+                    <option value="match">Usual location</option>
+                    <option value="mismatch">Unusual location</option>
+                </select>
+
+                <button type="submit">Analyze Transaction</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h3>Configurable Rule Thresholds</h3>
+            <p class="muted">Adjust these demo rules before analyzing.</p>
+
+            <div class="threshold-grid">
+                <div>
+                    <label for="amountThreshold">High amount (₹)</label>
+                    <input id="amountThreshold" type="number" min="1"
+                           value="20000">
+                </div>
+                <div>
+                    <label for="frequencyThreshold">Max transactions/hour</label>
+                    <input id="frequencyThreshold" type="number" min="1"
+                           value="3">
+                </div>
+            </div>
+            <p class="hint">Location mismatch adds risk independently.</p>
+        </section>
+
+        <section class="panel result-panel" aria-live="polite">
+            <div class="result-heading">
+                <h3>Risk Assessment</h3>
+                <span id="riskBadge" class="badge low">LOW</span>
+            </div>
+
+            <div class="score-row">
+                <div>
+                    <p class="muted">Risk score</p>
+                    <p class="score"><span id="riskScore">0</span><small>/100</small></p>
+                </div>
+                <div class="score-track">
+                    <div id="scoreBar" class="score-fill"></div>
+                </div>
+            </div>
+
+            <h4>Triggered rules</h4>
+            <ul id="ruleList">
+                <li>Submit a transaction to evaluate the rules.</li>
+            </ul>
+            <p id="decision" class="decision">Awaiting transaction analysis.</p>
+            <p class="disclaimer">Educational prototype only. Not connected to a bank
+                and not suitable for real financial decisions.</p>
+        </section>
+
+        <section class="panel">
+            <div class="result-heading">
+                <h3>Recent Demo Checks</h3>
+                <button id="clearHistory" class="secondary" type="button">Clear</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Risk score</th>
+                            <th>Risk level</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr><td colspan="3">No transactions analyzed yet.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>Fraud-Watch · Student project · Milestone 01</footer>
+    <script src="script.js"></script>
+</body>
+</html>
