@@ -1,0 +1,71 @@
+[
+  {
+    "id": "TXN-1001",
+    "timestamp": "2026-09-26T14:22:00Z",
+    "accountNo": "ACC-789012",
+    "amount": 250.00,
+    "recipient": "Amazon Web Services",
+    "category": "Cloud Services",
+    "location": "New York, USA",
+    "ipAddress": "192.168.1.45",
+    "device": "MacBook Pro",
+    "riskScore": 12,
+    "riskLevel": "Low",
+    "status": "Approved",
+    "ruleViolations": []
+  },
+  {
+    "id": "TXN-1002",
+    "timestamp": "2026-09-26T14:35:12Z",
+    "accountNo": "ACC-789012",
+    "amount": 9800.00,
+    "recipient": "Overseas Wire Corp",
+    "category": "International Wire",
+    "location": "Lagos, Nigeria",
+    "ipAddress": "41.203.65.12",
+    "device": "Unknown Android",
+    "riskScore": 88,
+    "riskLevel": "Critical",
+    "status": "Flagged",
+    "ruleViolations": [
+      "HIGH_AMOUNT_EXCEEDED",
+      "LOCATION_MISMATCH_SUSPECT",
+      "NEW_DEVICE_DETECTED"
+    ]
+  },
+  {
+    "id": "TXN-1003",
+    "timestamp": "2026-09-26T14:40:00Z",
+    "accountNo": "ACC-345678",
+    "amount": 1250.00,
+    "recipient": "Apple Store",
+    "category": "Electronics",
+    "location": "San Francisco, USA",
+    "ipAddress": "172.56.21.90",
+    "device": "iPhone 15",
+    "riskScore": 45,
+    "riskLevel": "Medium",
+    "status": "Under Review",
+    "ruleViolations": [
+      "FREQUENCY_SPIKE_DETECTED"
+    ]
+  },
+  {
+    "id": "TXN-1004",
+    "timestamp": "2026-09-26T15:05:40Z",
+    "accountNo": "ACC-789012",
+    "amount": 4800.00,
+    "recipient": "Crypto Exchange Direct",
+    "category": "Cryptocurrency",
+    "location": "Bucharest, Romania",
+    "ipAddress": "82.77.100.4",
+    "device": "Linux Desktop",
+    "riskScore": 76,
+    "riskLevel": "High",
+    "status": "Flagged",
+    "ruleViolations": [
+      "LOCATION_MISMATCH_SUSPECT",
+      "HIGH_RISK_CATEGORY"
+    ]
+  }
+]

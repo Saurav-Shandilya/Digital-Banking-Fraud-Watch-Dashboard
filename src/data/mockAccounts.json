@@ -1,0 +1,20 @@
+[
+  {
+    "accountNo": "ACC-789012",
+    "accountHolder": "Saurav Shandilya",
+    "accountType": "Checking Account",
+    "balance": 45280.50,
+    "currency": "INR",
+    "homeLocation": "New York, USA",
+    "status": "Active"
+  },
+  {
+    "accountNo": "ACC-345678",
+    "accountHolder": "Saubhagy Singh",
+    "accountType": "Savings Account",
+    "balance": 128400.00,
+    "currency": "INR",
+    "homeLocation": "San Francisco, USA",
+    "status": "Active"
+  }
+]

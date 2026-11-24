@@ -1,0 +1,18 @@
+{
+  "maxSingleTransactionLimit": 5000,
+  "highRiskAmountThreshold": 3000,
+  "velocityFrequencyLimitPerHr": 5,
+  "allowedHomeLocations": ["New York, USA", "San Francisco, USA"],
+  "highRiskCategories": ["Cryptocurrency", "International Wire", "Casino & Gambling"],
+  "weights": {
+    "amountViolation": 35,
+    "locationMismatch": 40,
+    "frequencySpike": 20,
+    "highRiskCategory": 15
+  },
+  "riskThresholds": {
+    "low": 25,
+    "medium": 50,
+    "high": 75
+  }
+}
